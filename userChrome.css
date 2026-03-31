@@ -1,0 +1,79 @@
+/* ==========================================
+   FLOORP BROWSER - COMPACT THEME
+   ========================================== */
+
+/* === CORE LAYOUT VARIABLES === */
+:root {
+  --tab-min-height: 28px !important;
+  --toolbarbutton-outer-padding: 1px !important;
+  --toolbarbutton-inner-padding: 4px !important;
+}
+
+/* === HIDE TITLE BAR === */
+#titlebar { display: none !important; }
+
+/* === COMPACT TOOLBAR === */
+#nav-bar {
+  min-height: 32px !important;
+  padding-block: 2px !important;
+}
+
+/* === URL BAR === */
+#urlbar:not([breakout-extend="true"]) .urlbar-background {
+  border-radius: 6px !important;
+  margin: 3px !important;
+}
+#urlbar-input-container { border: 0 solid transparent !important; }
+
+/* === COMPACT TABS === */
+.tabbrowser-tab {
+  min-height: var(--tab-min-height) !important;
+  max-height: var(--tab-min-height) !important;
+}
+
+/* === VERTICAL TABS (Sidebar) === */
+#tabbrowser-tabs[orient="vertical"] .tab-background {
+  border-radius: 6px !important;
+  margin-inline: 2px !important;
+}
+
+/* === FLOORP SIDEBAR COMPACT === */
+#sidebar-box {
+  min-width: 200px !important;
+}
+
+/* === BOOKMARKS BAR === */
+#PersonalToolbar:not([collapsed="true"]) {
+  min-height: 0 !important;
+  padding: 0 2px !important;
+}
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+  margin: 0 !important;
+  padding: 2px 3px !important;
+}
+
+/* === REMOVE CLIP-PATH FROM BROWSER AREA === */
+@-moz-document url-prefix("chrome:") {
+  .browserContainer,
+  .browserStack {
+    clip-path: none !important;
+  }
+}
+
+/* === HIDE TAB CLOSE BUTTON UNLESS HOVERED === */
+.tabbrowser-tab:not(:hover) .tab-close-button {
+  display: none !important;
+}
+
+/* === COMPACT AUDIO INDICATOR === */
+.tab-audio-button {
+  --icon-size-default: 12px !important;
+  margin: -1px -2px 0 -4px !important;
+}
+
+/* === FLOORP WORKSPACE INDICATOR === */
+.floorp-workspace-indicator,
+.floorp-workspace-tabs-label {
+  font-size: 11px !important;
+  padding: 0 4px !important;
+}
